@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flag Off Button</title>
+    <title>Round Animated Button</title>
     <style>
       * {
         margin: 0;
@@ -15,36 +15,36 @@
         align-items: center;
         justify-content: center;
         height: 100vh;
-        background-color: #f3f4f6; /* Equivalent to bg-gray-100 */
-        padding: 16px;
+        background-color: #1a1a1a; /* Dark background */
       }
       .button {
-        width: 70vw;
-        height: 50vh;
-        font-size: 4rem; /* Equivalent to text-7xl */
+        width: 70vh; /* Equal width & height for a perfect circle */
+        height: 70vh;
+        font-size: 4rem; /* Equivalent to text-4xl */
         font-weight: bold;
         color: white;
         background: linear-gradient(
           to right,
-          #ef4444,
-          #ec4899
-        ); /* Equivalent to from-red-500 to-pink-500 */
-        border-radius: 24px; /* Equivalent to rounded-3xl */
-        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Equivalent to shadow-2xl */
+          #f5610b,
+          #d55814
+        ); /* Orange-yellow gradient */
+        border-radius: 50%; /* Makes it round */
+        box-shadow: 0px 10px 30px rgba(255, 204, 0, 0.3); /* Soft glowing effect */
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         border: none;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
       }
       .button:hover {
-        transform: scale(1.05);
-        box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.3); /* Equivalent to hover:shadow-3xl */
-      }
-      .button:active {
-        transform: scale(0.95); /* Equivalent to active:scale-95 */
+        transform: scale(1.1);
+        box-shadow: 0px 15px 40px rgba(255, 204, 0, 0.5);
       }
     </style>
   </head>
   <body>
-    <button class="button">FLAG OFF</button>
+    <button class="button">FLAG OFF!</button>
   </body>
 </html>
