@@ -32,11 +32,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
         cursor: pointer;
         border: none;
         overflow: hidden;
         position: relative;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
       }
       .button::before {
         content: "";
@@ -52,20 +57,12 @@
           rgba(255, 255, 255, 0) 80%
         );
       }
-      .button:hover,
       .button:active {
-        transform: scale(1.1) translateY(-10px);
-        box-shadow: inset -8px -8px 20px rgba(255, 255, 255, 0.3),
-          inset 8px 8px 20px rgba(0, 0, 0, 0.3),
-          0px 10px 20px rgba(0, 0, 0, 0.2),
-          /* Minimal shadow on top */ 0px 50px 80px rgba(0, 0, 0, 0.8); /* Stronger bottom shadow on hover */
-      }
-      .button:active {
-        transform: scale(1.05) translateY(0px);
+        transform: scale(0.95) translateY(5px);
         box-shadow: inset -10px -10px 25px rgba(255, 255, 255, 0.3),
           inset 10px 10px 25px rgba(0, 0, 0, 0.3),
-          0px 5px 15px rgba(0, 0, 0, 0.2),
-          /* Minimal shadow on top */ 0px 30px 50px rgba(0, 0, 0, 0.7); /* Slightly reduced bottom shadow */
+          0px 3px 10px rgba(0, 0, 0, 0.2),
+          /* Minimal shadow on top */ 0px 20px 40px rgba(0, 0, 0, 0.6); /* Reduced bottom shadow */
       }
       .button img {
         width: 80%;
